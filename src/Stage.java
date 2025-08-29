@@ -2,6 +2,7 @@ import java.awt.Graphics;
 import java.awt.Point;
 
 public class Stage {
+<<<<<<< Updated upstream
   Grid grid;
   Actor cat;
   Actor dog;
@@ -20,4 +21,22 @@ public class Stage {
     dog.paint(g);
     bird.paint(g);
   }
+=======
+    Grid grid = new Grid();
+    
+    Actor[] actors = {
+        new Cat(grid.getCell(5, 5)),
+        new Bird(grid.getCell(10, 10)),
+        new Dog(grid.getCell(15, 12))  // pick any row/col you like
+    };
+    
+
+    public void paint(Graphics g, Point mousePos) {
+        grid.paint(g, mousePos);     
+        for (Actor actor : actors) {     
+            actor.paint(g);
+        }
+    }
+
+>>>>>>> Stashed changes
 }

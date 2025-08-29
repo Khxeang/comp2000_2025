@@ -20,7 +20,13 @@ public class Grid {
     }
   }
 
+<<<<<<< Updated upstream
   public Cell cellAtColRow(int c, int r) {
     return cells[c][r];
   }
+=======
+  public Cell getCell(int row, int col) {
+    return cells[row][col];
+}
+>>>>>>> Stashed changes
 }

@@ -1,6 +1,5 @@
 import java.awt.Dimension;
 import java.awt.Graphics;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -19,7 +18,14 @@ public class Main extends JFrame {
       @Override
       public void paint(Graphics g) {
         stage.paint(g, getMousePosition());
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
       }
+
+
+
     }
 
     private Main() {
