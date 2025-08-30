@@ -93,10 +93,12 @@ Turns out you are not able to use colours to distinguish the different types of 
     ear1.addPoint(loc.x + 11, loc.y + 5);
     ear1.addPoint(loc.x + 15, loc.y + 15);
     ear1.addPoint(loc.x + 7, loc.y + 15);
+
     Polygon ear2 = new Polygon();
     ear2.addPoint(loc.x + 22, loc.y + 5);
     ear2.addPoint(loc.x + 26, loc.y + 15);
     ear2.addPoint(loc.x + 18, loc.y + 15);
+
     Polygon face = new Polygon();
     face.addPoint(loc.x + 5, loc.y + 15);
     face.addPoint(loc.x + 29, loc.y + 15);
@@ -110,10 +112,12 @@ Turns out you are not able to use colours to distinguish the different types of 
     ear1.addPoint(loc.x + 5, loc.y + 5);
     ear1.addPoint(loc.x + 15, loc.y + 5);
     ear1.addPoint(loc.x + 5, loc.y + 15);
+
     Polygon ear2 = new Polygon();
     ear2.addPoint(loc.x + 20, loc.y + 5);
     ear2.addPoint(loc.x + 30, loc.y + 5);
     ear2.addPoint(loc.x + 30, loc.y + 15);
+
     Polygon face = new Polygon();
     face.addPoint(loc.x + 8, loc.y + 7);
     face.addPoint(loc.x + 27, loc.y + 7);
@@ -128,10 +132,12 @@ Turns out you are not able to use colours to distinguish the different types of 
     wing1.addPoint(loc.x + 5, loc.y + 5);
     wing1.addPoint(loc.x + 15, loc.y + 17);
     wing1.addPoint(loc.x + 5, loc.y + 17);
+
     Polygon wing2 = new Polygon();
     wing2.addPoint(loc.x + 30, loc.y + 5);
     wing2.addPoint(loc.x + 20, loc.y + 17);
     wing2.addPoint(loc.x + 30, loc.y + 17);
+    
     Polygon body = new Polygon();
     body.addPoint(loc.x + 15, loc.y + 10);
     body.addPoint(loc.x + 20, loc.y + 10);
