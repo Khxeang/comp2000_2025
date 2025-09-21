@@ -1,9 +1,11 @@
+
 import java.awt.Color;
 import java.awt.Polygon;
 
-public class Dog extends Actor {
+public class Dog extends Animal {
   public Dog(Cell loc) {
-    super(loc, Color.RED);
+    // Updated, now Animal takes in 3 arguments which is location, color and name.
+    super(loc, Color.BLUE, "Dog");
 
     Polygon ear1 = new Polygon();
     ear1.addPoint(loc.x + 5, loc.y + 5);
@@ -27,4 +29,11 @@ public class Dog extends Actor {
     shapes.add(head);
 
   }
+
+  // Set dog to pick up bones
+  @Override
+  public String getTargetItem(){
+    return "Bone";
+  }
+
 }

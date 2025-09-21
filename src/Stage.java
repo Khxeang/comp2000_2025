@@ -3,25 +3,38 @@ import java.awt.Point;
 import java.util.ArrayList;
 
 public class Stage {
-  Grid grid;
-  Actor cat;
-  Actor dog;
-  Actor bird;
+    Grid grid;
+    Actor cat;
+    Actor dog;
+    Actor bird;
 
-  ArrayList<Actor> actors;
+    ArrayList<Actor> actors;
 
-  public Stage() {
-    grid = new Grid();
-    actors = new ArrayList<Actor>();
-    actors.add(cat = new Cat(grid.cellAtColRow(0, 0)));
-    actors.add(dog = new Dog(grid.cellAtColRow(0, 15)));
-    actors.add(bird = new Bird(grid.cellAtColRow(12, 9)));
-  }
-
-  public void paint(Graphics g, Point mouseLoc) {
-    grid.paint(g, mouseLoc);
-    for (Actor a : actors) {
-      a.paint(g);
+    public void paint(Graphics g, Point mouseLoc){
+        grid.paint(g, mouseLoc);
+        for (Actor a : actors){
+            a.paint(g);
+        }
     }
-  }
+
+
+    //Only Spawn in chosen animal
+    public Stage(String chosenAnimal) {
+        grid = new Grid();
+        actors = new ArrayList<>();
+
+        if(chosenAnimal.equals("Dog")){
+            dog = new Dog(grid.cellAtColRow(1, 0));
+            actors.add(dog);
+        } else if (chosenAnimal.equals("Cat")){
+            cat = new Cat(grid.cellAtColRow(1, 0));
+            actors.add(cat);
+        } else if (chosenAnimal.equals("Bird")){
+            bird = new Bird(grid.cellAtColRow(3, 0));
+            actors.add(bird);
+        }
+
+    
+    }
+
 }
