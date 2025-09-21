@@ -24,7 +24,7 @@ public class Stage {
         actors = new ArrayList<>();
 
         if("Dog".equals(chosenAnimal)){
-            dog = new Dog(grid.cellAtColRow(0, 0));
+            dog = new Dog(grid.cellAtColRow(1, 0));
             actors.add(dog);
         } else if (chosenAnimal.equals("Cat")){
             cat = new Cat(grid.cellAtColRow(2, 0));
@@ -32,6 +32,9 @@ public class Stage {
         } else if (chosenAnimal.equals("Bird")){
             bird = new Bird(grid.cellAtColRow(3, 0));
             actors.add(bird);
+        } else if (chosenAnimal.equals("Kangaroo")){
+            Kangaroo kangaroo = new Kangaroo(grid.cellAtColRow(4,0));
+            actors.add(kangaroo);
         }
 
     
