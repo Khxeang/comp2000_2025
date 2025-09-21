@@ -5,13 +5,12 @@ import java.awt.Polygon;
 public class Dog extends Animal {
   public Dog(Cell loc) {
     // Updated, now Animal takes in 3 arguments which is location, color and name.
-    super(loc, Color.BLUE, "Dog");
+    super(loc, Color.RED, "Dog");
 
     Polygon ear1 = new Polygon();
     ear1.addPoint(loc.x + 5, loc.y + 5);
     ear1.addPoint(loc.x + 15, loc.y + 5);
     ear1.addPoint(loc.x + 5, loc.y + 15);
-
 
     Polygon ear2 = new Polygon();
     ear2.addPoint(loc.x + 20, loc.y + 5);
@@ -30,10 +29,10 @@ public class Dog extends Animal {
 
   }
 
-  // Set dog to pick up bones
   @Override
   public String getTargetItem(){
     return "Bone";
   }
+
 
 }

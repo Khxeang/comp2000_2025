@@ -14,7 +14,7 @@ public class Menu extends JPanel {
         JButton bird = new JButton("Play as Bird");
 
 
-        dog.addActionListener (e -> mainMenu.startGame("Dog "));
+        dog.addActionListener (e -> mainMenu.startGame("Dog"));
         cat.addActionListener (e -> mainMenu.startGame("Cat"));
         bird.addActionListener (e -> mainMenu.startGame("Bird"));
 

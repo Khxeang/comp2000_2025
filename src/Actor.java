@@ -21,7 +21,7 @@ public class Actor {
 
     public void paint(Graphics g){
         for(Polygon p : shapes){
-            g.setColor(color.BLACK);
+            g.setColor(Color.BLACK);
             g.drawPolygon(p);
             g.setColor(color);
             g.fillPolygon(p);
