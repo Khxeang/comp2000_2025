@@ -18,7 +18,7 @@ public class Stage {
     }
 
 
-    //Only Spawn in chosen animal
+    //Only Spawn in chosen animal with their respective item
     public Stage(String chosenAnimal) {
         grid = new Grid();
         actors = new ArrayList<>();
@@ -27,18 +27,33 @@ public class Stage {
             Dog dog = new Dog(grid.cellAtColRow(col, row));
             actors.add(dog);
             activeAnimal = dog;
+
+            Bone bone = new Bone(grid.cellAtColRow(5,5));
+            actors.add(bone);
+
         } else if (chosenAnimal.equals("Cat")){
             Cat cat = new Cat(grid.cellAtColRow(col, row));
             actors.add(cat);
             activeAnimal = cat;
+
+            Fish fish = new Fish(grid.cellAtColRow(5,5));
+            actors.add(fish);
+
         } else if (chosenAnimal.equals("Bird")){
             Bird bird = new Bird(grid.cellAtColRow(col, row));
             actors.add(bird);
             activeAnimal = bird;
+
+            Worm worm = new Worm(grid.cellAtColRow(5,5));
+            actors.add(worm);
+
         } else if (chosenAnimal.equals("Kangaroo")){
             Kangaroo kangaroo = new Kangaroo(grid.cellAtColRow(col,row));
             actors.add(kangaroo);
             activeAnimal = kangaroo;
+
+            Grass grass = new Grass(grid.cellAtColRow(5,5));
+            actors.add(grass);
         }
 
     
