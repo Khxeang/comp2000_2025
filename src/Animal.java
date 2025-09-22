@@ -4,6 +4,7 @@ import java.util.Random;
 public abstract class Animal extends Actor {
     protected String name;
     protected Random random = new Random();
+    protected Collectibles<Edible> collectibles = new Collectibles<>();
 
     public Animal(Cell loc, Color color, String name) {
         super(loc, color);
@@ -20,6 +21,8 @@ public abstract class Animal extends Actor {
         // Check if the animal can eat this specific item
         if (canEat(item)) {
             System.out.println(name + " ate a " + item.getItemName());
+            collectibles.collectItem(item);
+
             return true; // Successfully ate the item
         } else {
             System.out.println(name + " cannot eat " + item.getItemName());
@@ -45,9 +48,6 @@ public abstract class Animal extends Actor {
         }
     }
 
-    public void showInventory(){
-        System.out.println(name + "'s Inventory:");
-    }
 
     public Edible createNewEdible(Grid grid, Actor currentActor) {
         int c = random.nextInt(grid.cells.length);

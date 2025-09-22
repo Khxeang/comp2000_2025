@@ -27,4 +27,5 @@ public class Actor {
             g.fillPolygon(p);
         }
     }
+
 }
