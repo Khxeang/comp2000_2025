@@ -5,6 +5,7 @@ import java.awt.event.KeyEvent;
 import javax.swing.AbstractAction;
 import javax.swing.ActionMap;
 import javax.swing.InputMap;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.KeyStroke;
@@ -23,7 +24,7 @@ public class Main extends JFrame{
             setPreferredSize(new Dimension(720, 720));
 
             //Add a key binding for the Escape key to return to the menu
-            InputMap im = this.getInputMap(JPanel.WHEN_IN_FOCUSED_WINDOW);
+            InputMap im = this.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
             ActionMap am = this.getActionMap();
             im.put(KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), "backToMenu");
             am.put("backToMenu", new AbstractAction() {
@@ -33,7 +34,46 @@ public class Main extends JFrame{
                }
                 }
             );
+                //Key bindings for movements of the active animal
+            im.put(KeyStroke.getKeyStroke(KeyEvent.VK_W, 0), "moveUp");
+            am.put("moveUp", new AbstractAction() {
+                @Override
+               public void actionPerformed(ActionEvent e){
+                stage.moveSelectedAnimal("UP");
+               }
+                }
+            );
+
+            im.put(KeyStroke.getKeyStroke(KeyEvent.VK_S, 0), "moveDown");
+            am.put("moveDown", new AbstractAction() {
+                @Override
+               public void actionPerformed(ActionEvent e){
+                stage.moveSelectedAnimal("DOWN");
+            }
         }
+            );
+
+            im.put(KeyStroke.getKeyStroke(KeyEvent.VK_A, 0), "moveLeft");
+            am.put("moveLeft", new AbstractAction() {
+                @Override
+               public void actionPerformed(ActionEvent e){
+                stage.moveSelectedAnimal("LEFT");
+               }
+                }
+            );
+
+            im.put(KeyStroke.getKeyStroke(KeyEvent.VK_D, 0), "moveRight");
+            am.put("moveRight", new AbstractAction() {
+                @Override
+               public void actionPerformed(ActionEvent e){
+                stage.moveSelectedAnimal("RIGHT");
+               }
+                }
+            );
+
+        }
+
+
 
         @Override
         public void paint(Graphics g){
