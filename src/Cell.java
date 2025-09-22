@@ -10,6 +10,17 @@ public class Cell extends Rectangle  {
         super(x, y, size, size);
     }
 
+    private Actor actor;
+
+    public Actor getActor() {
+        return actor;
+    }
+
+    //Method to help Animal move on the grid
+    public void setActor(Actor actor) {
+        this.actor = actor;
+    }
+
     public void paint(Graphics g, Point mousePos){
         if(contains(mousePos)){
             g.setColor(Color.GRAY);
@@ -19,6 +30,10 @@ public class Cell extends Rectangle  {
         g.fillRect(x, y, size, size);
         g.setColor(Color.BLACK);
         g.drawRect(x, y, size, size);
+
+        if (actor != null){
+            actor.paint(g);
+        }
     }
     
     public boolean contains(Point p) {

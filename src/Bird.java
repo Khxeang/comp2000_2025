@@ -45,9 +45,4 @@ public class Bird extends Animal{
       }
   
   }
-
-  @Override
-  public String getTargetItem(){
-    return "Worm";
-  }
 }

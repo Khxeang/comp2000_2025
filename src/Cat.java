@@ -48,11 +48,4 @@ public class Cat extends Animal {
       }
   
   }
-
-
-
-  @Override
-  public String getTargetItem(){
-    return "Fish";
-  }
 }

@@ -3,6 +3,10 @@ import java.awt.Graphics;
 import java.awt.Polygon;
 
 public abstract class Item extends Actor {
+    public String getItemName() {
+        // Provide a default implementation or make this abstract if Item is an abstract class
+        return "Default Item Name";
+    }
     
     public Item(Cell loc, Color color) {
         super(loc, color);
@@ -21,4 +25,5 @@ public abstract class Item extends Actor {
             g.drawPolygon(tempPolygon);
         }
     }
+
 }

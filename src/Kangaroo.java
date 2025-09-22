@@ -52,9 +52,4 @@ public class Kangaroo extends Animal {
     
     }
 
-
-    @Override
-    public String getTargetItem(){
-        return "Grass";
-    }
 }
